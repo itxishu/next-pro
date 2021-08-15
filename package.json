@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "cross-env  PORT=80 NODE_ENV=production node server",
-    "dev": "cross-env  PORT=3001 NODE_ENV=development INIT_ENV=dev node server",
+    "dev": "cross-env  PORT=3001 NODE_ENV=development INIT_ENV=dev nodemon server",
     "build:prod": "cross-env NODE_OPTIONS='--max_old_space_size=8192' NODE_ENV=production INIT_ENV=prod next build",
     "build:pre": "cross-env NODE_OPTIONS='--max_old_space_size=8192' NODE_ENV=production INIT_ENV=prod next build",
     "build:test": "cross-env NODE_OPTIONS='--max_old_space_size=8192' NODE_ENV=production INIT_ENV=test next build"
@@ -13,7 +13,7 @@
     "axios": "^0.21.1",
     "cacheable-response": "^2.4.3",
     "express": "^4.17.1",
-    "next": "11.1.0",
+    "next": "^9.4.4",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
