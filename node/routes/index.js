@@ -27,9 +27,7 @@ module.exports = function (app) {
         component: newComponent,
         data: item
       });
-      ctx.respond = false;
     });
   });
-
   return router;
 };

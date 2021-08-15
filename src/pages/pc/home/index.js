@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <ul>
       <li>
-        <Link href="/blog?id=first" as="/blog/first">
-          <a>My first blog post</a>
+        <Link href="/pc/about?id=first" as="/pc/about">
+          <a>关于我们</a>
         </Link>
       </li>
       <li>

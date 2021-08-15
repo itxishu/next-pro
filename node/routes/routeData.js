@@ -5,12 +5,10 @@ const routeData = [
   },
   {
     path: '/about',
-    component: '/pc/about'
+    component: '/pc/about',
+    cached: true,
   },
-  {
-    path: '/',
-    component: '/pc/home'
-  },
+
 ];
 
 module.exports = { routeData };
