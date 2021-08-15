@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+const { Option } = Select;
 function About({ githubRankList }) {
   return <div>关于我们</div>;
 }
