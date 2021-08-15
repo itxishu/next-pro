@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-function About({ githubRankList }) {
+function About(props) {
+  console.log(props, 'about render')
   return <div>关于我们</div>;
 }
 
@@ -21,5 +22,12 @@ function About({ githubRankList }) {
 //     }
 //   };
 // };
+About.getInitialProps = async (props) => {
+  console.log(props.toString(), 'about')
+  let pageProps = {
+    test: 1
+  }
 
+  return pageProps
+}
 export default About;
