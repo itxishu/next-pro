@@ -23,7 +23,7 @@ function About(props) {
 //   };
 // };
 About.getInitialProps = async (props) => {
-  console.log(props.toString(), 'about')
+  console.log(props, 'about')
   let pageProps = {
     test: 1
   }

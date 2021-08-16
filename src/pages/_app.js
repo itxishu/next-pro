@@ -2,7 +2,6 @@ import '../styles/globals.css'
 import { isPc } from '../utils'
 
 function MyApp({ Component, pageProps, ctx }) {
-  console.log(pageProps, 'pageProps')
   const isServer = typeof window === 'undefined'
 
   return <Component {...pageProps} isServer={isServer} />
@@ -16,13 +15,12 @@ MyApp.getInitialProps = async (props) => {
   if (props.Component.getInitialProps) {
     pageProps = await props.Component.getInitialProps(props)
   }
-  console.log('===', '执行完毕', pageProps)
   return {
     pageProps: {
       ...pageProps,
       pcFlag,
       isServer,
-    },
+    }
   }
 }
 

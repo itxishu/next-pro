@@ -4,7 +4,6 @@ const cacheConfig = {
   time: 1000 * 60 * 30, // 缓存时间毫秒数
   cacheRoutes: [
     '/about'
-    
   ],
 }
 module.exports = {
