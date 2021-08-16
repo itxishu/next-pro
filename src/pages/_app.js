@@ -1,16 +1,28 @@
 import '../styles/globals.css'
-function MyApp({ Component, pageProps }) {
+import { isPc } from '../utils'
+
+function MyApp({ Component, pageProps, ctx }) {
   console.log(pageProps, 'pageProps')
-  return <Component {...pageProps} />
+  const isServer = typeof window === 'undefined'
+
+  return <Component {...pageProps} isServer={isServer} />
 }
 MyApp.getInitialProps = async (props) => {
+  const { ctx } = props
+  const isServer = !!ctx.req && typeof window === 'undefined'
+
+  const pcFlag = isServer ? ctx.req.pcFlag : isPc()
   let pageProps = {}
   if (props.Component.getInitialProps) {
     pageProps = await props.Component.getInitialProps(props)
   }
-  console.log('===', '执行完毕', pageProps)
+  console.log('===', '执行完毕', pageProps, props)
   return {
-    pageProps,
+    pageProps: {
+      ...pageProps,
+      pcFlag,
+      isServer,
+    },
   }
 }
 

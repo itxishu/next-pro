@@ -5,7 +5,7 @@ const routeData = [
   },
   {
     path: '/about',
-    component: '/pc/about',
+    component: '/about',
     cached: true,
   },
 
