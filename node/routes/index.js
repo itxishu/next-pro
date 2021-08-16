@@ -2,7 +2,7 @@ const { Router } = require('express');
 const { isPc } = require('../utils');
 const { render } = require('../utils/render');
 const { routeData } = require('./routeData');
-
+// const routeData = require('../config').cacheConfig.cacheRoutes
 const router = Router();
 
 module.exports = function (app) {
